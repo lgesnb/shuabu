@@ -86,8 +86,8 @@ def getBeijinTime():
         print(min_ratio)
         print(max_ratio)
         max_ratio = int(hour)
-        min_1 = 900 * min_ratio
-        max_1 = 1000 * max_ratio
+        min_1 = 1900 * min_ratio 
+        max_1 = 21000 * max_ratio
         min_1 = int(K * min_1)
         max_1 = int(K * max_1)
         print("天气系数是")
