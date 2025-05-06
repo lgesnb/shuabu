@@ -1,14 +1,8 @@
-name: 刷步数
+name: shua
 
 on:
-  #push:
-  #  branches: [ main ]
-  #pull_request:
-  #  branches: [ main ]
   schedule:
-    - cron: '0 2,4,7,10,12,13 * * *'
-  watch:
-    types: started
+    - cron: '10,20,1,12, * * *'
   workflow_dispatch:
 
 jobs:
