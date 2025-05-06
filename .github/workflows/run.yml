@@ -2,7 +2,7 @@ name: shua
 
 on:
   schedule:
-    - cron: '40 20,1,12, * * *'
+    - cron: '05 12 * * *'
   workflow_dispatch:
 
 jobs:
