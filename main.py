@@ -222,15 +222,15 @@ def main(_user, _passwd, min_1, max_1):
 #     response = requests.get(url, headers=headers).json()
 #     t = response['currentTime2']
 #     return t
-def get_time():
-    try:
-        utc_now = datetime.datetime.now(datetime.UTC)
-        beijing_tz = datetime.timezone(datetime.timedelta(hours=8))  # 北京时间是 UTC+8
-        beijing_now = utc_now.astimezone(beijing_tz)
-        t = int(beijing_now.timestamp() * 1000)
-    except Exception as e:
-        print(e)
-        return
+#def get_time():
+#    try:
+#        utc_now = datetime.datetime.now(datetime.UTC)
+#        beijing_tz = datetime.timezone(datetime.timedelta(hours=8))  # 北京时间是 UTC+8
+#        beijing_now = utc_now.astimezone(beijing_tz)
+#        t = int(beijing_now.timestamp() * 1000)
+#    except Exception as e:
+#        print(e)
+#        return
 
 # 获取app_token
 def get_app_token(login_token):
