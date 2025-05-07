@@ -79,9 +79,7 @@ def getBeijinTime():
         pattern = re.compile('nhrs=(\\d+)')
         find = re.search(pattern, result)
         hour = find.group(1)
-        # 计算最小比例值
         min_ratio = max(math.ceil(int(hour)), 0)
-        # 计算最大比例值
         max_ratio = math.ceil(int(hour))
         print(min_ratio)
         print(max_ratio)
