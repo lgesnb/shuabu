@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Checkout codes
         uses: actions/checkout@v4
-      # name: Update system and install zsh
+       #name: Update system and install zsh
         #run: |
-          sudo -E apt-get -qq update
-          sudo -E apt-get install zsh -y
+          #sudo -E apt-get -qq update
+          #sudo -E apt-get install zsh -y
           
       - name: 初始化Python
         uses: actions/setup-python@v4
