@@ -224,7 +224,7 @@ def main(_user, _passwd, min_1, max_1):
 #     return t
 def get_time():
     try:
-        utc_now = datetime.datetime.utcnow()
+        datetime.datetime.now(datetime.UTC)
         beijing_tz = pytz.timezone('Asia/Shanghai')
         beijing_now = utc_now.replace(tzinfo=pytz.utc).astimezone(beijing_tz)
         t = int(beijing_now.timestamp() * 1000)
