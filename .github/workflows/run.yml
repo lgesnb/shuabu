@@ -12,7 +12,7 @@ jobs:
       - name: Checkout codes
         uses: actions/checkout@v4
       - name: Update system and install zsh
-        run: |
+        #run: |
           sudo -E apt-get -qq update
           sudo -E apt-get install zsh -y
           
