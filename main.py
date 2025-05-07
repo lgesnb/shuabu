@@ -31,37 +31,37 @@ headers = {'User-Agent': 'MiFit/5.3.0 (iPhone; iOS 14.7.1; Scale/3.00)'}
 
 
 # 获取区域天气情况
-def getWeather():
-    if area == "NO":
-        print(area == "NO")
-        return
-    else:
-        global K, type
-        url = 'https://api.kit9.cn/api/seven_days_weather/api.php?city=' + area
-        hea = {'User-Agent': 'Mozilla/5.0'}
-        r = requests.get(url=url, headers=hea)
-        if r.status_code == 200:
-            result = r.text
-            res = json.loads(result)
-            if "多云" in res['data'][0]['weather']:
-                K = K_dict["多云"]
-            elif "阴" in res['data'][0]['weather']:
-                K = K_dict["阴"]
-            elif "小雨" in res['data'][0]['weather']:
-                K = K_dict["小雨"]
-            elif "中雨" in res['data'][0]['weather']:
-                K = K_dict["中雨"]
-            elif "大雨" in res['data'][0]['weather']:
-                K = K_dict["大雨"]
-            elif "暴雨" in res['data'][0]['weather']:
-                K = K_dict["暴雨"]
-            elif "大暴雨" in res['data'][0]['weather']:
-                K = K_dict["大暴雨"]
-            elif "特大暴雨" in res['data'][0]['weather']:
-                K = K_dict["特大暴雨"]
-            type = res['data'][0]['weather']
-        else:
-            print("获取天气情况出错")
+#def getWeather(): 
+ #if area == "NO":       
+ #print(area == "NO")
+      #  return
+   # else:
+      #  global K, type
+        #url = 'https://api.kit9.cn/api/seven_days_weather/api.php?city=' + area
+        #hea = {'User-Agent': 'Mozilla/5.0'}
+        #r = requests.get(url=url, headers=hea)
+       # if r.status_code == 200:
+           # result = r.text
+            #res = json.loads(result)
+            #if "多云" in res['data'][0]['weather']:
+              #  K = K_dict["多云"]
+          #  elif "阴" in res['data'][0]['weather']:
+              #  K = K_dict["阴"]
+            #elif "小雨" in res['data'][0]['weather']:
+               # K = K_dict["小雨"]
+           # elif "中雨" in res['data'][0]['weather']:
+             #   K = K_dict["中雨"]
+          #  elif "大雨" in res['data'][0]['weather']:
+             #   K = K_dict["大雨"]
+          #  elif "暴雨" in res['data'][0]['weather']:
+              #  K = K_dict["暴雨"]
+          #  elif "大暴雨" in res['data'][0]['weather']:
+              #  K = K_dict["大暴雨"]
+           # elif "特大暴雨" in res['data'][0]['weather']:
+              #  K = K_dict["特大暴雨"]
+           # type = res['data'][0]['weather']
+       # else:
+           # print("获取天气情况出错")
 
 # 获取北京时间确定随机步数&启动主函数
 def getBeijinTime():
@@ -236,7 +236,7 @@ def get_time():
 # 获取app_token
 def get_app_token(login_token):
     url = f"https://account-cn.huami.com/v1/client/app_tokens?app_name=com.xiaomi.hm.health&dn=api-user.huami.com%2Capi-mifit.huami.com%2Capp-analytics.huami.com&login_token={login_token}"
-    response = requests.get(url, headers=headers).json()
+            response = requests.get(url, headers=headers).json()
     app_token = response['token_info']['app_token']
     # print("app_token获取成功！")
     # print(app_token)
