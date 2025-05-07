@@ -244,9 +244,10 @@ def get_app_token(login_token):
     # print(app_token)
     return app_token
 
+def main_handler(event, context):
+
 import time
 from datetime import datetime
 timestamp = time.time()
 beijing_time = datetime.fromtimestamp(timestamp + 8 * 3600)
 formatted_time = beijing_time.strftime('%Y-%m-%d %H:%M:%S')
-print(f"北京时间：{formatted_time}")
