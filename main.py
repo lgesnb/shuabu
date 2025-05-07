@@ -6,7 +6,7 @@ import random
 import re
 import sys
 import time
-import pytz
+
 import requests
 
 # 推送server酱
@@ -224,11 +224,10 @@ def main(_user, _passwd, min_1, max_1):
 #     return t
 def get_time():
     try:
-        datetime.datetime.now(datetime.UTC)
-        beijing_tz = pytz.timezone('Asia/Shanghai')
-        beijing_now = utc_now.replace(tzinfo=pytz.utc).astimezone(beijing_tz)
+        utc_now = datetime.datetime.now(datetime.UTC)
+        beijing_tz = datetime.timezone(datetime.timedelta(hours=8))  # 北京时间是 UTC+8
+        beijing_now = utc_now.astimezone(beijing_tz)
         t = int(beijing_now.timestamp() * 1000)
-        return t
     except Exception as e:
         print(e)
         return
