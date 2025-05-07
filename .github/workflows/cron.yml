@@ -3,7 +3,7 @@ name: Random Cron
   #workflow_run:
     #workflows: ["刷步数"]
     #types:
-      - #completed
+    #completed
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
