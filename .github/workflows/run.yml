@@ -1,8 +1,8 @@
 name: shua
 
 on:
-  #schedule:
-    #cron: '05 12 * * *'
+  schedule:
+    - cron: '05 10,11 * * *'
   workflow_dispatch:
 
 jobs:
