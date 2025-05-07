@@ -224,9 +224,9 @@ def main(_user, _passwd, min_1, max_1):
 #     return t
 def get_time():
     try:
-        url = "http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp"
+        url = 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp'
         response = requests.get(url, headers=headers).json()
-        t = response["data"]["t"]
+     t = response["data"]["t"]
         return t
     except Exception as e:
         print(e)
