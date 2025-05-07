@@ -244,7 +244,7 @@ def get_app_token(login_token):
     # print(app_token)
     return app_token
 
-推送server
+# 推送server
 def push_wx(desp=""):
     if sckey == 'NO':
         print(sckey == "NO")
@@ -254,7 +254,7 @@ def push_wx(desp=""):
         params = {
             "text": '【✍小米运动步数修改✍】',
             "desp": desp
-       }
+        }
 
         response = requests.get(server_url, params=params).text
         print(response)
