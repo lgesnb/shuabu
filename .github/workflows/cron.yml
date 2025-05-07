@@ -1,9 +1,9 @@
-name: Random Cron
-#on:
-  #workflow_run:
-    #workflows: ["刷步数"]
-    #types:
-    #completed
+ name: Random Cron
+on:
+  workflow_run:
+    workflows: ["aaa"]
+    types:
+      - completed
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
@@ -20,4 +20,4 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "random cron"
-          git push origin main
+          git push origin mainorigin main
