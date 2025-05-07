@@ -244,23 +244,9 @@ def get_app_token(login_token):
     # print(app_token)
     return app_token
 
- 推送server
-def push_wx(desp=""):
-    if sckey == 'NO':
-        print(sckey == "NO")
-        return
-    else:
-        server_url = f"https://sctapi.ftqq.com/{sckey}.send"
-        params = {
-            "text": '【✍小米运动步数修改✍】',
-            "desp": desp
-        }
-
-        response = requests.get(server_url, params=params).text
-        #print(response)
-        
-def main_handler(event, context):
-    getBeijinTime()
-
-if __name__ == "__main__":
-    getBeijinTime()
+import time
+from datetime import datetime
+timestamp = time.time()
+beijing_time = datetime.fromtimestamp(timestamp + 8 * 3600)
+formatted_time = beijing_time.strftime('%Y-%m-%d %H:%M:%S')
+print(f"北京时间：{formatted_time}")
