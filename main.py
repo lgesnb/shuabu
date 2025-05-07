@@ -254,7 +254,7 @@ def get_app_token(login_token):
         #params = {
             #"text": '【✍小米运动步数修改✍】',
             #"desp": desp
-        }
+       # }
 
         #response = requests.get(server_url, params=params).text
         #print(response)
