@@ -1,5 +1,5 @@
 name: Random Cron
-on:
+#on:
   #workflow_run:
     #workflows: ["刷步数"]
     #types:
